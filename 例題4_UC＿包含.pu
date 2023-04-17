@@ -1,0 +1,8 @@
+@startuml ユースケース図
+rectangle 銀行{
+usecase 金額を指定する
+usecase 貯金を引き出す
+}
+金額を指定する<. 貯金を引き出す: << include >>
+@enduml
+
