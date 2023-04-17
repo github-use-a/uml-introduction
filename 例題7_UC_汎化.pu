@@ -1,0 +1,10 @@
+@startuml ユースケース図
+' left to right direction
+rectangle 図書館{
+usecase 本を借りる
+usecase 自動貸し出し
+usecase 手動貸出し
+}
+本を借りる<|-- 自動貸し出し
+本を借りる<|-- 手動貸出し
+@enduml

@@ -1,0 +1,7 @@
+@startuml ユースケース図
+rectangle 銀行2 {
+usecase 両替する
+usecase (<u>預金を引き出す</u>\n拡張点\n金種を指定する) as input
+}
+input <. (両替する) : <<extend>>
+@enduml
