@@ -1,0 +1,7 @@
+@startuml ユースケース図
+rectangle 銀行1 {
+usecase 両替する
+usecase 預金を引き出す
+}
+預金を引き出す<. 両替する: <<extend>>
+@enduml
