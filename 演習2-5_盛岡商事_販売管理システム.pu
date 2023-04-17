@@ -1,5 +1,4 @@
-
-@startuml 例題3
+@startuml ユースケース図
 left to right direction
 actor 田中#DDDDDD;line:black;line.bold;
 actor 鈴木#DDDDDD;line:black;line.bold;
@@ -12,5 +11,4 @@ usecase 商品の出荷状況 << U3 >>
 田中---> 注文商品 : システム確認
 商品の出荷 <--鈴木  : 担当
 商品の出荷状況 <--鈴木 : システム登録
-
 @enduml

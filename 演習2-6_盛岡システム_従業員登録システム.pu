@@ -1,5 +1,4 @@
-
-@startuml 例題3
+@startuml ユースケース図
 left to right direction
 actor 人事担当者#DDDDDD;line:black;line.bold;
 actor 社員#DDDDDD;line:black;line.bold;
