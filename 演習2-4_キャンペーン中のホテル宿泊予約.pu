@@ -1,0 +1,9 @@
+@startuml ユースケース図
+package 予約システム{
+usecase キャンセル
+usecase 予約
+usecase ログイン
+}
+キャンセル .> 予約 : << include >>
+予約 .> ログイン : << include >> 
+@enduml

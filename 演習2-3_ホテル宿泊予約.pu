@@ -1,0 +1,10 @@
+@startuml ユースケース図
+' left to right direction
+actor 利用者#DDDDDD;line:black;line.bold;
+package 予約システム{
+usecase ログイン
+usecase 予約
+}
+利用者--> ログイン
+予約 <. ログイン 
+@enduml

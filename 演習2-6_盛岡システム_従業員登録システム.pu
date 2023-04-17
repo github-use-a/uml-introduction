@@ -1,0 +1,16 @@
+
+@startuml 例題3
+left to right direction
+actor 人事担当者#DDDDDD;line:black;line.bold;
+actor 社員#DDDDDD;line:black;line.bold;
+rectangle 従業員登録システム {
+usecase 社員情報 << U1 >>
+usecase 社員の情報 << U2 >>
+usecase 変更届 << U3 >>
+usecase 社員さんの情報 << U4 >>
+}
+人事担当者--> 社員情報 : システム登録
+社員の情報 <--社員 : 参照
+変更届 <--社員 : 人事担当者に提出
+人事担当者---> 社員さんの情報 : 修正
+@enduml
