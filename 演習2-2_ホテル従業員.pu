@@ -3,8 +3,6 @@
 rectangle ホテル{
 usecase 従業員
 usecase 経営者
-usecase ホテル従業員
 }
 従業員<|-- 経営者
-従業員<|-- ホテル従業員
 @enduml
