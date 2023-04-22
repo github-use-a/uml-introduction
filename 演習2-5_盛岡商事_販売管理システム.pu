@@ -3,12 +3,9 @@ left to right direction
 actor 田中#DDDDDD;line:black;line.bold;
 actor 鈴木#DDDDDD;line:black;line.bold;
 rectangle 販売管理システム {
-usecase 商品の出荷 << U1 >>
-usecase 注文商品 << U2 >>
-usecase 商品の出荷状況 << U3 >>
+usecase 注文商品確認 
+usecase 商品出荷登録 
 }
-田中--> 商品の出荷 : 担当
-田中---> 注文商品 : システム確認
-商品の出荷 <--鈴木  : 担当
-商品の出荷状況 <--鈴木 : システム登録
+田中--> 注文商品確認 
+商品出荷登録 <-- 鈴木
 @enduml
