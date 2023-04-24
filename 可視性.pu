@@ -1,0 +1,17 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Employee{
+- id:int=0
+- name:String
+#depertoment:String
+/連続年数:int
+---
++setid(id:int):void
++getid():int
++setname(name:String):void
++getName(name:String):void
++setdept(dept:String):void
++getdept():String
+}
+hide Employee circle
+@enduml
