@@ -1,0 +1,38 @@
+@startuml
+skinparam classAttributeIconSize 0
+class 空車リスト <<stereotype>> {
+- 管理番号:string
+}
+class 車 {
+- 車番号:string
+- 車種:string
+- 駆動方式:string
+- 貸出料金:string
+}
+class 顧客 {
+- 顧客ID:string
+- 氏名:string
+- 電話番号:string
+- 郵便番号:string
+- 住所:string
+---
++ setline(氏名+string)void
+}
+class 予約 {
+- 予約番号:string
+- 車番号:string
+- 予約日:string
+- 顧客ID:string
+}
+class 貸出{
+- 貸出番号:string
+- 車番号:string
+- 予約日:string
+- 顧客ID:string
+}
+hide 空車リスト circle
+hide 車 circle
+hide 顧客 circle
+hide 予約 circle
+hide 貸出 circle
+@enduml
