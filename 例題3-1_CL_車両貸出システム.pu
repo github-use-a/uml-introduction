@@ -1,6 +1,6 @@
 @startuml
 skinparam classAttributeIconSize 0
-class 空車リスト <<stereotype>> {
+class 空車リスト {
 - 管理番号:string
 }
 class 車 {
@@ -16,7 +16,7 @@ class 顧客 {
 - 郵便番号:string
 - 住所:string
 ---
-+ setline(氏名+string)void
++ setName(氏名:string)void
 }
 class 予約 {
 - 予約番号:string
