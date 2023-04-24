@@ -1,0 +1,21 @@
+@startuml ユースケース図
+left to right direction
+actor 利用者#DDDDDD;line:black;line.bold;
+actor ホテル従業員#DDDDDD;line:black;line.bold;
+actor ホテルの管理者#DDDDDD;line:black;line.bold;
+rectangle ホテル予約システム {
+usecase 空室状況
+usecase ホテルの部屋
+usecase 予約
+usecase システムにログイン
+usecase システムを使用
+}
+利用者--> 空室状況 : 閲覧
+利用者--> ホテルの部屋 : 予約
+空室状況<-- ホテル従業員 : 入力
+ホテルの管理者--> 予約 : 集計
+利用者--> システムにログイン : 予約
+システムを使用 <--ホテル従業員 : ログイン
+システムを使用 <--ホテルの管理者 : ログイン
+
+@enduml
