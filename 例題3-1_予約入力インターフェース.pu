@@ -1,0 +1,10 @@
+@startuml
+interface 予約入力{
++ 予約が入力された
+---
+}
+class 画面マネージャ{
+---
+}
+予約入力 <|--down- 画面マネージャ
+@enduml
