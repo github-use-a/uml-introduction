@@ -1,0 +1,7 @@
+@startuml
+left to right direction
+注文 <.. 注文管理
+note top of 注文管理
+注文管理が注文のメソッドもしくは属性を呼び出している
+end note
+@enduml

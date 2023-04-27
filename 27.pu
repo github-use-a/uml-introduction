@@ -1,0 +1,124 @@
+//多重度
+' @startuml
+' left to right direction
+' class 会社 {}
+' class 社員 {}
+' ' 会社 --> 社員:雇う
+' note top  of 会社:雇用者
+' note top of 社員:従業員
+
+' @enduml
+
+//集約
+' @startuml
+'     left to right direction
+'     会員リスト o-- 会員
+'     note right of 会員リスト
+'     会員クラスがなくて成り立つ
+'     end note
+' @enduml
+
+//複合
+' @startuml
+' left to right direction
+' パソコン"1" *-- ハードディスク
+' note right of パソコン
+' ハードディスクがないと成り立ちません。
+' end note
+
+
+
+' @enduml
+
+//継承
+' @startuml
+' class 社員{
+' - 社員ID
+' - 社員名
+' ---
+' + 社員ID設定（社員ID:int）:void
+' + 社員ID取得（）:int
+' + 社員名設定（社員名:String）:void
+' + 社員名取得（）:String
+' }
+' class 技術社員{
+' - プロジェクト名:String
+' ---
+' + プロジェクト名設定（プロジェクト名:String）:void
+' + プロジェクト名取得（）:String
+' }
+' class 営業社員{
+' - 担当地域名:String
+' ---
+' + 担当地域名設定（プロジェクト名:String）:void
+' + 担当地域名取得（）:String
+' }
+' ' 社員<|--down- 技術社員
+' ' 社員<|--down- 営業社員
+
+' 技術社員 --right|> 社員
+' 営業社員 --right|> 社員
+
+' @endum
+
+//抽象クラス
+' @startuml
+' class Animal {
+' ---
+' + Walk:void
+' + {abstract} eat():int
+' + {abstract} cry():void
+' }
+' class Dog {
+' ---
+' + eat():int
+' + cry():void
+' }
+' class Cat {
+' ---
+' + eat():int
+' + cry():void
+' }
+' Animal <|-down- Dog
+' Animal <|-down- Cat
+' @enduml
+
+//インターフェース
+' @startuml
+' class Word {
+' ---
+' + enter():void
+' }
+' class Excel {
+' ---
+' + enter():void
+' }
+' interface keyboard {
+' ' <<interface>>
+' ---
+' + enter():void
+' }
+' keyboard <|.. Word
+' keyboard <|.. Excel
+' class User {
+' }
+' keyboard <-up- User:<< use >>
+' @enduml
+
+//ロリポップ
+@startuml
+class Word {
+---
++ enter():void
+}
+class Excel {
+---
++ enter():void
+}
+circle "keyboard" as I1
+Word --( I1
+Excel --(
+class User {
+}
+I1 <-- User:<< use >>
+@enduml
