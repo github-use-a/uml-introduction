@@ -25,9 +25,6 @@
 ' note right of パソコン
 ' ハードディスクがないと成り立ちません。
 ' end note
-
-
-
 ' @enduml
 
 //継承
@@ -106,19 +103,75 @@
 ' @enduml
 
 //ロリポップ
+' @startuml
+' class Word {
+' ---
+' + enter():void
+' }
+' class Excel {
+' ---
+' + enter():void
+' }
+' circle "keyboard" as I1
+' Word --( I1
+' Excel --(
+' class User {
+' }
+' I1 <-- User:<< use >>
+' @enduml
+
+//オブジェクト図(多重度は記載×)
+' @startuml
+' left to right direction
+' object "<u>空車リスト2: 空車リスト</u>" as k2 {
+' 日付
+' }
+' object "<u>空車リスト1: 空車リスト</u>" as k1 {
+' 日付
+' }
+' object "<u>車情報1: 車</u>" as car1 {
+' 管理番号=5
+' 車種
+' 貸出料金
+' }
+' object "<u>車情報2: 車</u>" as car2 {
+' 管理番号=6
+' 車種
+' 貸出料金
+' }
+' k1 -- car1
+' k1 -- car2
+' k2 -- car1
+' @enduml
+
+//貸出管理システムのクラス図
 @startuml
-class Word {
----
-+ enter():void
+' left to right direction
+class "空車リスト" as empty_car {
+- 日付: Date
 }
-class Excel {
----
-+ enter():void
+class "車" as car {
+- 管理番号:int
+- 車種:String
+- 貸出料金:int
 }
-circle "keyboard" as I1
-Word --( I1
-Excel --(
-class User {
+class "貸出" as rental {
+- 貸出番号:int
 }
-I1 <-- User:<< use >>
+class "顧客" as customer {
+- 名前: String
+- 電話番号:String
+- 郵便番号:String
+- 住所:String
+}
+class "予約" as reserve {
+- 予約番号: int
+- 予約日:Date
+}
+empty_car "1" o-ri- "*" rental
+empty_car "*" o-down- "*" car
+rental "0..1" -down- "0..1" reserve
+car "1" -ri- "*" reserve
+rental "1" -ri- "1" customer
+reserve "1" -up- "1" customer
 @enduml
