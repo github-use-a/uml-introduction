@@ -1,0 +1,24 @@
+@startuml 例題1
+left to right direction
+actor 利用者#DDDDDD;line:black;line.bold;
+actor サーバー#DDDDDD;line:black;line.bold;
+
+rectangle 家計簿システム {
+usecase 利用者アカウント登録
+usecase 利用者ログイン
+usecase 利用者ログアウト
+usecase 家計簿に登録
+usecase 家計簿の編集
+usecase 家計簿の削除
+usecase 家計簿の検索
+usecase 家計簿の集計
+}
+利用者--> 利用者アカウント登録
+利用者--> 利用者ログイン
+利用者--> 利用者ログアウト
+利用者--> 家計簿に登録 
+利用者--> 家計簿の編集
+利用者--> 家計簿の削除
+利用者--> 家計簿の検索
+家計簿の集計 <-- サーバー
+@enduml
