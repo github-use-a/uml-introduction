@@ -1,0 +1,24 @@
+@startuml
+left to right direction
+object "社員管理システム" as k1 {
+- 社員データベース
+---
++ searchEmployee()
+}
+object "高橋洋平さん" as k2 {
+- 氏名：「高橋洋平さん」
+- 資格データベース
+---
++getName()
++getQualifications()
++addQualifications()
+---
+-資格情報
+ - 資格名：「情報処理安全確保支援士」
+ - 取得日：「2020年10月21日」
+- 資格情報
+ - 資格名：「Linuc試験Level1」
+ - 取得日：「2021年3月28日」
+}
+k1 -- k2
+@enduml

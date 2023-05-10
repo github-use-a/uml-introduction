@@ -1,0 +1,17 @@
+@startuml
+left to right direction
+class 車{
+- ブランド
+- 色
+---
+getBrand()
+getColor()
+changeTire()
+}
+class タイヤ {
+- サイズ
+---
+getSize()
+}
+車 -- タイヤ
+@enduml

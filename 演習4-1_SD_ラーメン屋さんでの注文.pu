@@ -1,0 +1,16 @@
+@startuml ラーメン屋さん
+Actor 顧客 as client
+Actor ウェイター as waiter
+Actor キッチン as kitchen
+Actor シェフ as chef
+
+client -> waiter: 注文する
+waiter -> kitchen: 注文を伝える
+kitchen -> chef: 注文を伝える
+chef -> kitchen: ラーメンを作る
+kitchen -> waiter: ラーメンができたことを伝える
+waiter -> client: ラーメンを配膳する
+
+
+
+@enduml

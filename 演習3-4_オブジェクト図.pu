@@ -1,0 +1,17 @@
+@startuml
+left to right direction
+object "車" as k1 {
+- ブランド
+- 色
+---
+getBrand()
+getColor()
+changeTire()
+}
+object "タイヤ" as k2 {
+- サイズ
+---
+getSize()
+}
+k1 -- k2
+@enduml
