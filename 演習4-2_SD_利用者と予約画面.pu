@@ -3,6 +3,6 @@ Actor 利用者 as user
 Actor 予約画面 as reservation_screen
 
 user -> reservation_screen: ログインメッセージ(非同期)
-reservation_screen --> user: 確認操作(同期)
+reservation_screen -> user: 確認操作(同期)
 
 @enduml
