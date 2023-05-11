@@ -1,0 +1,20 @@
+@startuml データ更新コントローラとホテルと予約
+hide footbox
+skinparam style strictuml /' 厳密なUMLに準拠する'/
+Actor 受注係 as order_clerk
+participant "注文登録画面" as order_entry_page
+participant "商品" as product
+
+order_clerk -> order_entry_page: 製品情報の取得を受信する
+product -> order_entry_page: 商品情報を返す
+order_entry_page -> order_clerk: 製品情報を表示する
+order_clerk -> order_entry_page: 注文の作成を送信する
+order_entry_page -> product: 注文オブジェクトを作成する
+order_entry_page -> product: 製品情報の取得を受信する
+product -> order_entry_page: 製品情報を返す  
+product -> order_entry_page: 注文オブジェクトの更新、注文登録の送信
+product -> order_entry_page: 注文確認を返す
+order_entry_page -> order_clerk: 注文確認を表示する
+
+
+@enduml

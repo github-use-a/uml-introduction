@@ -1,0 +1,14 @@
+@startuml データ更新コントローラとホテルと予約
+hide footbox
+skinparam style strictuml /' 厳密なUMLに準拠する'/
+participant "コントローラ" as controller
+participant "ホテル" as hotel
+participant "予約" as reservation
+
+controller -> hotel: 通話更新
+hotel -> reservation: 予約作成
+reservation -> hotel: 本呼び出し
+reservation -> hotel: 帰りの予約
+hotel -> controller: 応答を返す
+
+@enduml
