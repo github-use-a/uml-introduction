@@ -1,4 +1,7 @@
 @startuml 利用者と予約画面
+hide footbox
+skinparam style strictuml /' 厳密なUMLに準拠する'/
+
 Actor 利用者 as user
 Actor 予約画面 as reservation_screen
 
