@@ -1,0 +1,15 @@
+@startuml Web ページで画像を検索して閲覧するまでの仕組み
+hide footbox
+skinparam style strictuml /' 厳密なUMLに準拠する'/
+Actor ユーザー as user
+participant "ブラウザ" as browser
+participant "Webサーバー" as webserver
+participant "画面サーバー" as image_server
+
+browser -> webserver: 画像ファイル名取得
+browser -> webserver: 取得した画像ファイル要求
+webserver -> image_server: 画像ファイル取得
+image_server -> webserver: 画像ファイルを返す
+webserver -> browser: 画像ファイルを再生
+
+@enduml

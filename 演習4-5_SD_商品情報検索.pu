@@ -1,0 +1,17 @@
+@startuml 「商品情報を検索する」シーケンス
+hide footbox
+skinparam style strictuml /' 厳密なUMLに準拠する'/
+Actor 会員 as kaiin
+participant "商品検索画面" as product_search_screen
+participant "商品検索コントローラ" as product_search_controler
+
+kaiin -> product_search_screen: 商品検索（商品番号）
+product_search_screen -> product_search_controler: 商品情報リスト（商品カテゴリ）
+product_search_controler -> product_search_screen: 商品カテゴリリスト（商品カテゴリ数）
+product_search_screen -> product_search_controler: 商品カテゴリ作成（商品カテゴリ）
+product_search_screen -> product_search_controler: 商品カテゴリ設定（商品カテゴリ）
+product_search_screen -> product_search_controler: 商品情報表示（商品情報）
+product_search_controler -> product_search_screen: 商品情報表示（商品検索）
+
+
+@enduml
