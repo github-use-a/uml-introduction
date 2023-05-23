@@ -1,0 +1,15 @@
+@startuml あ
+
+' left to right direction
+[*] -right-> メニュー
+予約と確認 <-down- メニュー
+予約と確認 -down-> メニュー
+予約と確認 -right-> あなたの順番
+予約と確認 -right-> あなたの順番
+あなたの順番 -down-> メニュー
+メニュー -down-> 今の順番
+メニュー <-down- 今の順番
+
+メニュー -right-> [*]
+
+@enduml
