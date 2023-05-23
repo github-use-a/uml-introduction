@@ -1,4 +1,4 @@
-@startuml あ
+@startuml 診療予約システム
 
 ' left to right direction
 [*] -right-> メニュー
