@@ -2,15 +2,15 @@
 hide footbox
 skinparam style strictuml /' 厳密なUMLに準拠する'/
 Actor 客 as user
-participant "自動販売機" as vendingmachine
+participant "料金装置" as pricequipment
+participant "ボタン" as button
 participant "ベンダー装置" as vendorequipment
 
-user -> vendingmachine : 商品を選択する
-user -> vendingmachine: お金を投入する
-user -> vendingmachine : ボタンを押す
-vendorequipment -> vendingmachine : 売上を更新する
-vendingmachine -> user: 商品が出てくる
-user -> vendingmachine : 商品を受け取る
+user -> pricequipment : お金を投入する
+user -> button : ボタンを押す
+vendorequipment -> pricequipment : 売上を更新する
+pricequipment -> user: 商品が出てくる
+user -> pricequipment : 商品を受け取る
 
 
 @enduml
