@@ -1,0 +1,16 @@
+@startuml 客が自動販売機から商品を手に取るまでのシーケンス図
+hide footbox
+skinparam style strictuml /' 厳密なUMLに準拠する'/
+Actor 客 as user
+participant "自動販売機" as vendingmachine
+participant "ベンダー装置" as vendorequipment
+
+user -> vendingmachine : 商品を選択する
+user -> vendingmachine: お金を投入する
+user -> vendingmachine : ボタンを押す
+vendingmachine -> user: 商品が出てくる
+user -> vendingmachine : 商品を受け取る
+vendingmachine -> vendorequipment : 売上を更新する
+
+
+@enduml

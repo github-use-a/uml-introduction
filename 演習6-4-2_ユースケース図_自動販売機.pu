@@ -1,0 +1,17 @@
+@startuml ユースケース図
+left to right direction
+actor 客#DDDDDD;line:black;line.bold;
+actor ベンダー #DDDDDD;line:black;line.bold;
+
+rectangle 自動販売機 {
+usecase 自動販売機の利用
+usecase 商品の選択と購入
+usecase 自動販売機の管理
+usecase 商品の補充と管理
+}
+客 --> 自動販売機の利用
+客 --> 商品の選択と購入
+自動販売機の管理 <-- ベンダー
+商品の補充と管理 <-- ベンダー
+
+@enduml
