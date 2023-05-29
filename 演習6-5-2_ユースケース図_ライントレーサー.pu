@@ -1,0 +1,29 @@
+@startuml ユースケース図
+left to right direction
+actor ユーザー#DDDDDD;line:black;line.bold;
+actor ライントレーサー #DDDDDD;line:black;line.bold;
+actor 光センサー #DDDDDD;line:black;line.bold;
+
+rectangle ライントレーサーのユースケース図{
+usecase ライントレーサーを操作する
+usecase 電源をONする
+usecase ライントレーサーを起動する
+usecase 光センサーの状態を検知する
+usecase 暗いライン上にあると判断する
+usecase 明るいライン上にあると判断する
+usecase モータを制御する
+usecase ラインの右境界線上を進む
+usecase 電源をOFFする
+}
+ユーザー --> (ライントレーサーを操作する)
+ライントレーサー --> (電源をONする)
+ライントレーサー --> (ライントレーサーを起動する)
+ライントレーサー --> (光センサーの状態を検知する)
+ライントレーサー --> (モーターを制御する)
+ライントレーサー --> (ラインの右境界線上を進む)
+ライントレーサー --> (電源をOFFする)
+光センサー --> (暗いライン上にあると判断する)
+光センサー --> (明るいライン上にあると判断する)
+
+
+@enduml
