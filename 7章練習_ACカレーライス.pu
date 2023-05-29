@@ -1,5 +1,5 @@
 @startuml 並列処理
-title フォークで並列処理
+title curry rice 
 start
 :カレーを作る;
 fork
