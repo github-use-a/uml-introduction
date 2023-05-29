@@ -1,27 +1,11 @@
-@startuml
+@startuml クラス図
 skinparam classAttributeIconSize 0
 class 自動販売機 {
-- 自動販売機番号
----
-+ ボタン選択(ボタン番号)          
-+ お金挿入(金額)                  
-+ 商品提供()                      
-+ お釣り返却()  
 }
 class ボタン {
-- ボタン番号
----
-+ 押す()
 }
 class 料金装置 {
-- 金額
----
-+ お金挿入(金額)
-+ お金返却()
 }
 class ベンダー装置 {
-- 商品
----
-+ 商品提供()
 }
 @enduml
