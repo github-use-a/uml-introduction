@@ -1,0 +1,27 @@
+@startuml クラス図
+skinparam classAttributeIconSize 0
+class ライントレーサー {
+-光センサー
+-右モータ
+-左モータ
+-CPU
+-電源SW
+---
++起動():void
++停止():void
++右旋回():void
++左旋回():void
+}
+光センサー -up-> ライントレーサー
+
+class 光センサー {
+}
+class モータ {
+}
+CPU -up-> モータ
+class CPU {
+}
+電源SW -up-> CPU
+class 電源SW{
+}
+@enduml
