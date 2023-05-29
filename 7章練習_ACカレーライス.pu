@@ -1,0 +1,22 @@
+@startuml 並列処理
+title フォークで並列処理
+start
+:カレーを作る;
+fork
+:野菜を洗う
+野菜を切る;
+fork
+:肉を炒める
+野菜を炒める
+水を加える;
+fork again
+:ルウを入れる
+調味料加える
+しっかり煮込む;
+end fork
+fork again
+:ご飯を炊く;
+end fork
+:カレーライス完成;
+stop
+@enduml
