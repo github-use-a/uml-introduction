@@ -1,5 +1,5 @@
 @startuml 並列処理
-title curry rice 
+title make curry rice 
 start
 :カレーを作る;
 fork
@@ -16,7 +16,8 @@ fork again
 しっかり煮込む;
 end fork
 fork again
-:ご飯を炊く;
+:お米を洗う
+ご飯を炊く;
 end fork
 :カレーライス完成;
 stop
