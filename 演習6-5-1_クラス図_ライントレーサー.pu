@@ -16,12 +16,22 @@ class ライントレーサー {
 
 class 光センサー {
 }
-class モータ {
+class 右モータ {
 }
-CPU -up-> モータ
+CPU -up-> 右モータ
 class CPU {
 }
 電源SW -up-> CPU
 class 電源SW{
 }
+
+class 左モータ {
+}
+CPU -up-> 左モータ
+class CPU {
+}
+' 電源SW -up-> CPU
+' class 電源SW{
+' }
+
 @enduml
