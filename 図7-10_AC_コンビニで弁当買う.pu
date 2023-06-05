@@ -1,0 +1,29 @@
+@startumlm アクティビティ図
+title コンビニで弁当を買う
+|客|
+start
+:弁当をレジに持っていく;
+|店員|
+fork
+|客|
+:お金を支払う;
+|店員|
+:精算する;
+|店員|
+fork again
+    if (温めますか) then (Yes)
+    :弁当を温める;
+    else (No)
+    endif
+    :弁当を袋に入れる;
+end fork
+|客|
+:弁当を手に持つ;
+stop
+@enduml
+
+
+
+
+
+
