@@ -1,0 +1,50 @@
+@startuml オブジェクト図
+
+left to right direction
+object "<u>301号室:部屋</u>" as room1 {
+    タイプ=シングル
+    価格=11000円
+    キャンペーン価格=9000円
+}
+object "<u>302号室:部屋</u>" as room2 {
+    タイプ=シングル
+    価格=11000円
+    キャンペーン価格=9000円
+}
+object "<u>303号室:部屋</u>" as room3 {
+    タイプ=シングル
+    価格=11000円
+    キャンペーン価格=9000円
+}
+object "<u>利用者:Aさん</u>" as user1 {
+        氏名
+        性別
+        年齢
+        住所
+        電話番号
+}
+object "<u>利用者:Bさん</u>" as user2 {
+        氏名
+        性別
+        年齢
+        住所
+        電話番号
+}
+object "<u>ホテル:ホテル" as hotel {
+}
+object "<u>予約情報:予約" as reserve {
+    チェックイン日=5月3日
+    滞在期間=2泊
+    値段=18000円
+}
+user1 -- reserve
+user2 -- reserve
+user1 -- room1
+user2 -- room3
+reserve -- hotel
+room1 -- hotel
+room2 -- hotel
+room3 -- hotel
+
+
+@enduml
